@@ -72,7 +72,7 @@ class Traslado(models.Model):
     destino = models.CharField(max_length=255)
    
     requiere_medico = models.BooleanField(default=False)
-    ambulancia_privada = models.BooleanField(default=False)#como cuenta con privada, ya no la cuento en mi sistema
+    ambulancia_privada = models.BooleanField(default=False)#si es privada, ya no la cuento en mi sistema
     # ya que por ahora solo va a registrar traslados con la ambulancia del hospital
     turno_fecha = models.DateField(null=True, blank=True)
     turno_hora = models.TimeField(null=True, blank=True)
