@@ -12,5 +12,15 @@ class Paciente(models.Model):
     observacion = models.TextField(blank=True, null=True)
     def __str__(self):
         return f"{self.apellido}, {self.nombre}"
-    #class Meta:
-       # db_table = 'paciente'
+    class Meta:
+        db_table = 'paciente'
+
+class ObraSocial(models.Model):
+    nombre = models.CharField(max_length=100, unique=True)
+    codigo = models.IntegerField(max_length=5, unique=True,blank=True, null=True)
+    def __str__(self):
+        return self.nombre
+    
+    class Meta:
+        db_table = 'obrasocial'
+        
