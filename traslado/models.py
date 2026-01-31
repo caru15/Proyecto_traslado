@@ -33,6 +33,7 @@ class Traslado(models.Model):
     origen = models.CharField(max_length=255)
     destino = models.CharField(max_length=255)
 
+
     estado = models.CharField(
         max_length=20,
         choices=ESTADOS,
