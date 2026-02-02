@@ -66,6 +66,8 @@ class Traslado(models.Model):
     estado = models.CharField(
         max_length=20,
         choices=ESTADOS,
+        null= True,
+        blank= True,
         default='PENDIENTE'
     )
     origen = models.CharField(max_length=255)
