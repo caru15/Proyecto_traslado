@@ -58,11 +58,15 @@ class Traslado(models.Model):
         choices=TIPOS_TRASLADO,
         default='SIMPLE'
     )
+
+    origen = models.CharField(max_length=255)
+    destino = models.CharField(max_length=255)
     sub_tipo = models.CharField(
         max_length=20,
         choices=SUBTIPO_TRASLADOS,
         default='ESTUDIO'
     )
+
     estado = models.CharField(
         max_length=20,
         choices=ESTADOS,
