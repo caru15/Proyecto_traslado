@@ -40,7 +40,7 @@ class Traslado(models.Model):
     )
     chofer =models.ForeignKey(
         'usuario.Usuario',
-        on_delete=models.PROTECT,
+        on_delete= models.PROTECT,
         related_name='traslados_chofer',
         null= True,
         blank=True
